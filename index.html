@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarot Hangman</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div>
+		<script type="text/javascript">
+		
+			var words = ["fool","magician","priestess","empress","emperor","heirophant","lovers","chariot","strength","hermit","fortune","justice","hanged","death","temperance","devil","tower","star","moon","sun","judgement","world"];
+
+			var word = words[Math.floor(Math.random() * words.length)];
+
+			var answerArray = [];
+			for (var i = 0; i < word.length; i++) {
+				answerArray[i] = "_";
+			}
+
+			var remainingLetters = word.length;
+
+
+		</script>
+	</div>
+</body>
+</html>
