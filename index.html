@@ -13,11 +13,26 @@
 			var word = words[Math.floor(Math.random() * words.length)];
 
 			var answerArray = [];
+			
 			for (var i = 0; i < word.length; i++) {
 				answerArray[i] = "_";
 			}
 
 			var remainingLetters = word.length;
+
+			while(remainingLetters > 0){
+			
+				alert(answerArray.join(" "));
+			
+				var guess = prompt("Press any key to guess, or click Cancel to stop playing.")
+
+				if (guess === null) {
+					break;
+				} else if (guess.length !==) {
+					alert("Please press any key")
+				}
+
+			};
 
 
 		</script>
