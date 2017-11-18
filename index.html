@@ -12,7 +12,7 @@
 
 			var word = words[Math.floor(Math.random() * words.length)];
 
-			var guessLimit 3;
+			var guessLimit = 3;
 
 
 
@@ -30,21 +30,31 @@
 			
 				var guess = prompt("Press any key to guess, or click Cancel to stop playing.")
 
+				var guess = guess.toLowerCase();
+
 				if (guess === null) {
 					break;
-				
+
 				} else if (guess.length !== 1 ) {
-					alert("Please press any key");
+					alert("Please press one key");
+				} else {
+					for (var j = 0; j < word.length; j++) {
+					if (word[j] !== guess) {
+						var guessLimit = -1;}
+					}
 				} else {
 
 					for (var j = 0; j < word.length; j++) {
-
 					if (word[j] === guess) {
-
 					answerArray[j] = guess;
 					remainingLetters--;
-						}
 					}
+					}
+				}
+
+				if (guessLimit === 0) {
+					alert("You have failed.");
+					break;
 				}
 		};
 		</script>
