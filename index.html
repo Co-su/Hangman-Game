@@ -5,16 +5,17 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div>
+	<div id="game">
 		<script type="text/javascript">
-		
-			var words = ["fool","magician","priestess","empress","emperor","heirophant","lovers","chariot","strength","hermit","fortune","justice","hanged","death","temperance","devil","tower","star","moon","sun","judgement","world"];
+		var html =
+  		"<p>Word: " + answerArray + "</p>"
+        document.querySelector("#game").innerHTML = html;
+
+			var words = ["fool","magician","priestess","empress","emperor","hierophant","lovers","chariot","strength","hermit","fortune","justice","hanged","death","temperance","devil","tower","star","moon","sun","judgement","world"];
 
 			var word = words[Math.floor(Math.random() * words.length)];
 
 			var guessLimit = 3;
-
-
 
 			var answerArray = [];
 			
@@ -28,6 +29,11 @@
 			
 				alert(answerArray.join(" "));
 			
+				function textBox() {var inputBox = document.createElement("input");
+					inputBox.setAttribute("type","text");
+					document.body.appendChild(inputBox);
+					}
+
 				var guess = prompt("Press any key to guess, or click Cancel to stop playing.")
 
 				var guess = guess.toLowerCase();
@@ -37,26 +43,21 @@
 
 				} else if (guess.length !== 1 ) {
 					alert("Please press one key");
-				} else {
-					for (var j = 0; j < word.length; j++) {
-					if (word[j] !== guess) {
-						var guessLimit = -1;}
-					}
+
 				} else {
 
 					for (var j = 0; j < word.length; j++) {
 					if (word[j] === guess) {
 					answerArray[j] = guess;
-					remainingLetters--;
+					remainingLetters--;}
+						}
 					}
-					}
-				}
-
 				if (guessLimit === 0) {
 					alert("You have failed.");
 					break;
-				}
-		};
+					}
+				};
+
 		</script>
 	</div>
 </body>
