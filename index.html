@@ -7,12 +7,32 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<div id="game">
-		<p>Press any key to guess</p>
-		<p id="arcana"> Arcana </p>
-		<input type="text" id="guessBox">
-		<button onclick="hnnghman()">GUESS</button>
-		<p id="alerts"></p>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1><strong>THE HANGED MAN</strong></h1>
+				<h3>An Arcana-Themed Game</h3>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col-md-4">
+				<h4>It is time to reveal your fate</h4>
+				<p>Chance has decided your path. Which of the 22 Greater Arcana belong to you?</p>
+				<p>Enter your guess one letter at a time and your fortune will slowly be revealed.</p>
+				<p>Patience is a virtue.</p>
+			</div>
+			<div id="col-md-1"></div>
+			<div class="col-md-7">
+				<div id="game">
+					<h2>Press any key to guess.</h2>
+					<p>Refresh the page to restart.</p>
+					<h3 id="arcana"></h3>
+					<input type="text" id="guessBox">
+					<button onclick="hnnghman()">GUESS</button>
+					<p id="alerts"></p>
+				</div>
+			</div>
+		</div>
 	</div>
 <script src="javascript.js"></script>
 </body>

@@ -39,8 +39,8 @@ function hnnghman() {
 		}
 		if (checkGuess === remainingLetters) {guessLimit--;}	
 	}
-	if (guessLimit===0) {document.getElementById("arcana").innerHTML = "YOU LOSE"
-    } else if (remainingLetters===0) {document.getElementById("alerts").innerHTML = "You win!"
+	if (guessLimit===0) {document.getElementById("arcana").innerHTML = "FAILURE"
+    } else if (remainingLetters===0) {document.getElementById("alerts").innerHTML = "Correct!"
     }	
 }
 

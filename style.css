@@ -1,0 +1,34 @@
+body {
+	align-content: center;
+	padding-top: 30px;
+	padding-bottom: 70px;
+	font-family: "Kartika","Georgia", Times, Times New Roman, serif, "Arial", "Helvetica Neue", Helvetica, sans-serif;
+	background-image: url("dust_scratches.png")
+}
+.container {
+	width: 1000px;
+}
+.col-md-12 {
+	color: #FEFEFD;
+	background-color: #797969;
+
+}
+.col-md-7 {
+	color: #FEFEFD;
+	background-color: #797969;
+	margin-top: 20px;
+	float: right;
+	position: relative;
+}
+.col-md-4 {
+	color: #FEFEFD;
+	background-color: #797969;
+	margin-top: 20px;
+}
+
+button {
+	background-color: #797969;
+}
+input {
+	background-color: #797969;
+}
